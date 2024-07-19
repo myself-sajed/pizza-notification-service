@@ -13,9 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/nodemailer": "^6.4.15",
     "config": "^3.3.11",
     "js-yaml": "^4.1.0",
     "kafkajs": "^2.2.4",
+    "nodemailer": "^6.9.14",
     "uuid": "^9.0.1",
     "winston": "^3.13.0"
   },
