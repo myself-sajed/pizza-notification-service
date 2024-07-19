@@ -1,4 +1,4 @@
-import { MailTransport } from "../mail";
+import { MailTransport } from "../mail/mail";
 import { Transport } from "../types/transport";
 
 const transport: Transport[] = [];

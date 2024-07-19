@@ -1,7 +1,7 @@
 import nodemailer, { Transporter } from "nodemailer";
-import { Message, Transport } from "./types/transport";
+import { Message, Transport } from "../types/transport";
 import config from "config";
-import logger from "./config/logger";
+import logger from "../config/logger";
 
 export class MailTransport implements Transport {
   private transporter: Transporter;
