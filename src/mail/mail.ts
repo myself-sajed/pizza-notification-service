@@ -7,9 +7,10 @@ export class MailTransport implements Transport {
   private transporter: Transporter;
   constructor() {
     this.transporter = nodemailer.createTransport({
-      host: config.get("transport.mail.host"),
-      port: config.get("transport.mail.port"),
-      secure: config.get("transport.mail.secure"),
+      // host: config.get("transport.mail.host"),
+      // port: config.get("transport.mail.port"),
+      // secure: config.get("transport.mail.secure"),
+      service: config.get("transport.mail.service"),
       auth: {
         user: config.get("transport.mail.auth.user"),
         pass: config.get("transport.mail.auth.pass"),
@@ -26,6 +27,9 @@ export class MailTransport implements Transport {
       html: message.html,
     });
 
-    logger.info({ info, message });
+    logger.info({
+      messageId: info.messageId,
+      message: { ...message, html: "sent" },
+    });
   }
 }
